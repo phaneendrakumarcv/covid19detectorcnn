@@ -70,7 +70,7 @@ def trainModel(model):
 
 
 
-        model.fit(train_generator,steps_per_epoch=400,epochs=10,validation_data=validation_generator,callbacks=[EarlyStopping(monitor='accuracy',restore_best_weights=True,patience=3)])
+        model.fit(train_generator,steps_per_epoch=400,epochs=10,validation_data=validation_generator,callbacks=[EarlyStopping(monitor='acc',restore_best_weights=True,patience=3)])
 
         model.save_weights('covid19detector.h5')
 
